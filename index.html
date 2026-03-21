@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="icon" type="image/png" href="assets/img/logo.png" />
+	<title>CGStudio Tools - Medidas</title>
+	<meta name="description" content="">
+	<meta property="og:url" content="www.www.cl" />
+	<meta property="og:image" content="https://cgstudio.cl/wp-content/uploads/2022/01/logo-cgstudio.png" />
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.min.js"></script>
+	<!-- AOS -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+	<style>
+		.content-warp{
+			border:2px solid #b4a6f5;
+			border-radius:10px;
+			padding: 40px;
+		}
+	</style>
+	
+	<!-- menu -------------- -->
+	<section class="pb-5 d-none">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-md-12">
+	        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+	          <div class="container">
+	            <a class="navbar-brand" href="#top"><img src="https://cgstudio.cl/wp-content/uploads/2022/01/logo-cgstudio.png" alt="logo" width="100" height=auto></a>
+	            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	              <span class="navbar-toggler-icon"></span>
+	            </button>
+	            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+	              <ul class="navbar-nav mb-lg-0">
+	                <li class="nav-item">
+	                  <a class="nav-link" href="#Item1">Item 1</a>
+	                </li>
+	                <li class="nav-item">
+	                  <a class="nav-link" href="#Item2">Item 2</a>
+	                </li>
+	                <li class="nav-item">
+	                  <a class="nav-link" href="#Item3">Item 3</a>
+	                </li>
+	              </ul>
+	            </div>
+	          </div>
+	        </nav>
+
+	      </div>
+	    </div>
+	  </div>
+	</section>
+
+	<section>
+		<div class="container-fluid pb-4" style="background-color: #333; min-height: 10vh;">
+			<div class="row">
+				<div class="col-md-12">
+					<p class="text-center py-4"><img src="https://cgstudio.cl/wp-content/uploads/2022/01/logo-cgstudio.png" alt="logo" class="img-fluid" width="100" height="auto"></p>
+          <h1 class="text-center text-light fw-700">Medidas</h1>
+          <p class="text-center text-light w-50">Herramienta para mostrar el tamaño de la pantalla y otros datos del dispositivo que estamos utilizando. Esto es útil para el diseño de gráficas y ajustes finos en html y css de un sitio.</p>
+				</div>
+			</div>
+		</div>
+	</section>	
+	<section>
+		<div class="container">
+			<div class="row py-5">
+				<div class="col-md-8 offset-md-2 content-warp">
+					<h2 class="py-4 fw-700">Datos del Navegador:</h2>
+					<p><strong>Dispositivo:</strong> <span id="deviceTypeValue">—</span></p>
+					<p><strong>Resolución (viewport):</strong> <span id="resViewport">—</span></p>
+					<p><strong>Resolución (screen):</strong> <span id="resScreen">—</span></p>
+					<p><strong>Navegador:</strong> <span id="browserValue">—</span></p>
+					<p><strong>Sistema:</strong> <span id="platformValue">—</span></p>
+					<p><strong>Touch:</strong> <span id="touchValue">—</span></p>
+					<p class="pt-2">
+					<a id="waBtn" href="#" target="_blank" rel="noopener" style="background-color:#198754;color:#fff;padding:10px 20px;text-decoration:none;border-radius:10px;">
+						<i class="fa-brands fa-whatsapp"></i> Enviar por Whatsapp
+					</a>
+				</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="d-none">
+		<main class="wrap">
+		    <header>
+		      <div class="headline">
+		        <div class="title" id="titleLine">—</div>
+		        <div class="meta">Actualizado: <span id="updatedAt">—</span></div>
+		      </div>
+		      <div class="actions">
+		        <button id="copyLine" type="button">Copiar resumen</button>
+		        <button id="copyJson" type="button">Copiar JSON</button>
+		        <button id="refresh" type="button">Actualizar</button>
+		      </div>
+		    </header>
+
+		    <section class="grid">
+		      <div class="card span6">
+		        <h2>Viewport</h2>
+		        <pre id="viewport"></pre>
+		      </div>
+		      <div class="card span6">
+		        <h2>Screen</h2>
+		        <pre id="screen"></pre>
+		      </div>
+		      <div class="card span6">
+		        <h2>Navegador / Device</h2>
+		        <pre id="navigatorInfo"></pre>
+		      </div>
+		      <div class="card span6">
+		        <h2>Preferencias</h2>
+		        <pre id="prefs"></pre>
+		      </div>
+		      <div class="card span6">
+		        <h2>Safe Area</h2>
+		        <pre id="safeArea"></pre>
+		      </div>
+		      <div class="card">
+		        <h2>Raw (todo)</h2>
+		        <pre id="raw"></pre>
+		      </div>
+		    </section>
+		  </main>
+
+		  <div id="safeAreaProbe" aria-hidden="true"></div>
+		  <div class="toast" id="toast">Copiado ✅</div>
+	</div>
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	
+	<!-- Initialize AOS --------- -->
+	<script>
+		AOS.init();
+	</script>
+
+	  <script>
+    const $ = (id) => document.getElementById(id);
+
+    function detectBreakpoint(w) {
+      const bps = [
+        { name: "xs", min: 0 },
+        { name: "sm", min: 576 },
+        { name: "md", min: 768 },
+        { name: "lg", min: 992 },
+        { name: "xl", min: 1200 },
+        { name: "xxl", min: 1400 },
+      ];
+      let current = bps[0];
+      for (const bp of bps) if (w >= bp.min) current = bp;
+      return current.name;
+    }
+
+    function detectDeviceType(w, touch) {
+      if (w < 768 && touch) return "mobile";
+      if (w < 1024 && touch) return "tablet";
+      return "desktop";
+    }
+
+    function getSafeArea() {
+      const probe = $("safeAreaProbe");
+      const cs = getComputedStyle(probe);
+      const px = (v) => Number.parseFloat(v) || 0;
+      return {
+        top: px(cs.paddingTop),
+        right: px(cs.paddingRight),
+        bottom: px(cs.paddingBottom),
+        left: px(cs.paddingLeft),
+      };
+    }
+
+    function getOrientation() {
+      if (screen.orientation && screen.orientation.type) return screen.orientation.type;
+      return matchMedia("(orientation: portrait)").matches ? "portrait" : "landscape";
+    }
+
+    function getInfo() {
+      const vv = window.visualViewport || null;
+      const vw = Math.round(window.innerWidth);
+      const vh = Math.round(window.innerHeight);
+
+      const touch = (navigator.maxTouchPoints || 0) > 0 || ("ontouchstart" in window);
+      const breakpoint = detectBreakpoint(vw);
+      const deviceType = detectDeviceType(vw, touch);
+
+      const uaData = navigator.userAgentData ? {
+        mobile: navigator.userAgentData.mobile,
+        brands: navigator.userAgentData.brands
+      } : null;
+
+      const connection = navigator.connection ? {
+        effectiveType: navigator.connection.effectiveType,
+        downlink: navigator.connection.downlink,
+        rtt: navigator.connection.rtt,
+        saveData: navigator.connection.saveData
+      } : null;
+
+      const info = {
+        updatedAt: new Date().toISOString(),
+        classification: { deviceType, breakpoint, touch },
+        viewport: {
+          innerWidth: vw,
+          innerHeight: vh,
+          clientWidth: document.documentElement.clientWidth,
+          clientHeight: document.documentElement.clientHeight,
+          scrollWidth: document.documentElement.scrollWidth,
+          scrollHeight: document.documentElement.scrollHeight,
+          visualViewport: vv ? {
+            width: Math.round(vv.width),
+            height: Math.round(vv.height),
+            scale: vv.scale,
+            offsetLeft: Math.round(vv.offsetLeft),
+            offsetTop: Math.round(vv.offsetTop),
+            pageLeft: Math.round(vv.pageLeft),
+            pageTop: Math.round(vv.pageTop),
+          } : null
+        },
+        screen: {
+          width: screen.width,
+          height: screen.height,
+          availWidth: screen.availWidth,
+          availHeight: screen.availHeight,
+          colorDepth: screen.colorDepth,
+          pixelDepth: screen.pixelDepth,
+          orientation: getOrientation(),
+        },
+        pixels: { devicePixelRatio: window.devicePixelRatio || 1 },
+        safeArea: getSafeArea(),
+        preferences: {
+          colorScheme: matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light",
+          reducedMotion: matchMedia("(prefers-reduced-motion: reduce)").matches,
+          contrastMore: matchMedia("(prefers-contrast: more)").matches
+        },
+        navigator: {
+          language: navigator.language,
+          languages: navigator.languages,
+          platform: navigator.platform,
+          userAgent: navigator.userAgent,
+          uaData,
+          cookieEnabled: navigator.cookieEnabled,
+          hardwareConcurrency: navigator.hardwareConcurrency,
+          deviceMemory: navigator.deviceMemory,
+          maxTouchPoints: navigator.maxTouchPoints,
+          connection
+        }
+      };
+
+      return info;
+    }
+
+    function render(info) {
+      $("titleLine").textContent =
+        `${info.classification.deviceType} · ${info.classification.breakpoint.toUpperCase()} · ` +
+        `${info.viewport.innerWidth}×${info.viewport.innerHeight} · DPR ${info.pixels.devicePixelRatio}`;
+        $("deviceTypeValue").textContent = info.classification.deviceType;
+        $("resViewport").textContent = `${info.viewport.innerWidth}×${info.viewport.innerHeight}`;
+        $("resScreen").textContent = `${info.screen.width}×${info.screen.height}`;
+        $("browserValue").textContent = info.navigator.userAgent;
+        $("platformValue").textContent = info.navigator.platform;
+        $("touchValue").textContent = info.classification.touch ? "Sí" : "No";
+
+      $("updatedAt").textContent = info.updatedAt;
+
+      $("viewport").textContent = JSON.stringify(info.viewport, null, 2);
+      $("screen").textContent = JSON.stringify(info.screen, null, 2);
+      $("navigatorInfo").textContent = JSON.stringify(info.navigator, null, 2);
+      $("prefs").textContent = JSON.stringify(info.preferences, null, 2);
+      $("safeArea").textContent = JSON.stringify(info.safeArea, null, 2);
+      $("raw").textContent = JSON.stringify(info, null, 2);
+    }
+
+    function toast(msg = "Copiado ✅") {
+      const t = $("toast");
+      t.textContent = msg;
+      t.classList.add("show");
+      setTimeout(() => t.classList.remove("show"), 900);
+    }
+
+    async function copyText(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+        toast();
+        return;
+      } catch (_) {
+        // fallback
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        ta.remove();
+        toast();
+      }
+    }
+
+    let raf = null;
+    function scheduleRender() {
+      if (raf) cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => render(getInfo()));
+    }
+
+    function wire() {
+      $("copyLine").addEventListener("click", () => {
+        const info = getInfo();
+        const line = `${info.classification.deviceType} | ${info.classification.breakpoint} | ` +
+          `${info.viewport.innerWidth}x${info.viewport.innerHeight} | ` +
+          `screen ${info.screen.width}x${info.screen.height} | ` +
+          `DPR ${info.pixels.devicePixelRatio} | ${info.screen.orientation}`;
+        copyText(line);
+      });
+
+      $("copyJson").addEventListener("click", () => copyText(JSON.stringify(getInfo(), null, 2)));
+      $("refresh").addEventListener("click", () => scheduleRender());
+
+      window.addEventListener("resize", scheduleRender, { passive: true });
+      window.addEventListener("orientationchange", scheduleRender, { passive: true });
+
+      if (window.visualViewport) {
+        visualViewport.addEventListener("resize", scheduleRender, { passive: true });
+        visualViewport.addEventListener("scroll", scheduleRender, { passive: true });
+      }
+
+      scheduleRender();
+    }
+
+    document.addEventListener("DOMContentLoaded", wire);
+  </script>
+
+  <!-- BTN Whatsapp -->
+  <script>
+  const phone = "56989009749";
+
+  function shortUA(ua) {
+    // opcional: recortar el user-agent para no hacerlo eterno
+    const m = ua.match(/(Edg|Chrome|Firefox|Safari)\/([\d.]+)/);
+    const browser = m ? `${m[1]} ${m[2].split(".")[0]}` : ua.slice(0, 60);
+    return browser;
+  }
+
+  function buildWhatsappMessage(info) {
+    return [
+      "Datos del Navegador:",
+      `Dispositivo: ${info.classification.deviceType}`,
+      `Resolución (viewport): ${info.viewport.innerWidth}×${info.viewport.innerHeight}`,
+      `Resolución (screen): ${info.screen.width}×${info.screen.height}`,
+      `Sistema: ${info.navigator.platform}`,
+      `Touch: ${info.classification.touch ? "Sí" : "No"}`,
+      `Navegador: ${shortUA(info.navigator.userAgent)}`
+    ].join("\n");
+  }
+
+  function updateWhatsappLink() {
+    const info = getInfo(); // tu función existente
+    const msg = buildWhatsappMessage(info);
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+    document.getElementById("waBtn").href = url;
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateWhatsappLink();
+    window.addEventListener("resize", updateWhatsappLink, { passive: true });
+    window.addEventListener("orientationchange", updateWhatsappLink, { passive: true });
+  });
+</script>
+	
+</body>
+</html>
