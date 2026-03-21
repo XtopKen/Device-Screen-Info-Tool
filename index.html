@@ -20,51 +20,21 @@
 <body>
 	<style>
 		.content-warp{
-			border:2px solid #b4a6f5;
+			border:2px solid #ee0000;
 			border-radius:10px;
 			padding: 40px;
 		}
 	</style>
-	
-	<!-- menu -------------- -->
-	<section class="pb-5 d-none">
-	  <div class="container">
-	    <div class="row">
-	      <div class="col-md-12">
-	        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-	          <div class="container">
-	            <a class="navbar-brand" href="#top"><img src="https://cgstudio.cl/wp-content/uploads/2022/01/logo-cgstudio.png" alt="logo" width="100" height=auto></a>
-	            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	              <span class="navbar-toggler-icon"></span>
-	            </button>
-	            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-	              <ul class="navbar-nav mb-lg-0">
-	                <li class="nav-item">
-	                  <a class="nav-link" href="#Item1">Item 1</a>
-	                </li>
-	                <li class="nav-item">
-	                  <a class="nav-link" href="#Item2">Item 2</a>
-	                </li>
-	                <li class="nav-item">
-	                  <a class="nav-link" href="#Item3">Item 3</a>
-	                </li>
-	              </ul>
-	            </div>
-	          </div>
-	        </nav>
 
-	      </div>
-	    </div>
-	  </div>
-	</section>
-
-	<section>
-		<div class="container-fluid pb-4" style="background-color: #333; min-height: 10vh;">
+	<section style="background-color: #333; min-height: 10vh; padding: 20px 0;">
+		<div class="container pb-4" >
 			<div class="row">
-				<div class="col-md-12">
-					<p class="text-center py-4"><img src="https://cgstudio.cl/wp-content/uploads/2022/01/logo-cgstudio.png" alt="logo" class="img-fluid" width="100" height="auto"></p>
-          <h1 class="text-center text-light fw-700">Medidas</h1>
-          <p class="text-center text-light w-50">Herramienta para mostrar el tamaño de la pantalla y otros datos del dispositivo que estamos utilizando. Esto es útil para el diseño de gráficas y ajustes finos en html y css de un sitio.</p>
+        <div class="col-md-2 offset-md-2">
+          <p class="text-center"><img src="https://cgstudio.cl/wp-content/uploads/2022/01/logo-cgstudio.png" alt="logo" class="img-fluid" width="100" height="auto"></p>
+        </div>
+				<div class="col-md-6">
+          <h1 class=" text-light fw-700">Device Screen Info Tool</h1>
+          <p class=" text-light">Herramienta para calcular y mostrar el tamaño de la pantalla y otros datos del dispositivo que estamos utilizando, el resultado se puede enviar por whatsapp a un número definido. Esto es útil para el diseño de gráficas y ajustes finos en html y css de un sitio.</p>
 				</div>
 			</div>
 		</div>
@@ -338,9 +308,9 @@
     document.addEventListener("DOMContentLoaded", wire);
   </script>
 
-  <!-- BTN Whatsapp -->
+  <!-- BTN Whatsapp - Ajustar número ---------- -->
   <script>
-  const phone = "56989009749";
+  const phone = "56912345678"; // Esto para un número +56 9 1234 5678
 
   function shortUA(ua) {
     // opcional: recortar el user-agent para no hacerlo eterno

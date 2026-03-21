@@ -1,0 +1,233 @@
+:root{
+	--color1:#8E78F4;
+	--color2:#B4A6F5;
+	--color3:#E834DB;
+	--banner-height:80vh;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+a{text-decoration: none!important;}
+
+h1,h2,h3,h4,h5,h6,p,a,ul,li{
+	font-family: "Onest", sans-serif;
+}
+
+/* Custom Classes ------------------------------------------------------------------ */
+	.text-center{
+	  text-align: center!important;
+	}
+	.text-left{
+	  text-align: left!important;
+	}
+	.text-light{
+	  color:#fff;
+	}
+	.text-dark{
+	  color:#333;
+	}
+	.text-color1{
+	  color: var(--color1);
+	}
+	.text-color2{
+	  color: var(--color2);
+	}
+	.text-color-blue-dark{
+	  color: #306ABF;
+	}
+	.text-uppercase{
+	  text-transform: uppercase;
+	}
+	.underline{
+	  text-decoration: underline;
+	  text-underline-offset: 10px;
+	  text-decoration-thickness: 4px;
+	}
+	.underline-color1{
+	  text-decoration: underline;
+	  text-decoration-color: var(--color1);
+	  text-underline-offset: 10px;
+	  text-decoration-thickness: 4px;
+	}
+	.underline-color2{
+	  text-decoration: underline;
+	  text-decoration-color: var(--color2);
+	  text-underline-offset: 10px;
+	  text-decoration-thickness: 4px;
+	}
+	.d-block-center{
+	  display: block!important;
+	  margin:0 auto!important;
+	}
+	.d-block-left{
+	  text-align: left!important;
+	  display: block!important;
+	}
+
+	.d-grid-center{
+	  display:grid!important;
+	  place-items:center!important;
+	}
+	.d-grid-start{
+	  display:grid!important;
+	  place-items:start!important;
+	}
+	.d-grid-end{
+	  display:grid!important;
+	  place-items:end!important;
+	}
+	.d-grid-place-self{
+	  place-self: center!important;
+	  display:grid!important;
+	}
+
+	/* font weight --------------------------------  */
+	.fw-300{
+	  font-weight: 300!important;
+	}
+	.fw-400{
+	  font-weight: 400!important;
+	}
+	.fw-500{
+	  font-weight: 500!important;
+	}
+	.fw-600{
+	  font-weight: 600!important;
+	}
+	.fw-700{
+	  font-weight: 700!important;
+	}
+	.fw-800{
+	  font-weight: 800!important;
+	}
+
+/* width  ----------------------------------- */
+.w-100{
+  width:100%;
+  margin:0 auto;
+  padding: 0!important;
+}
+@media(max-width:768px){
+  .w-100{
+    width:95%;
+  }
+}
+.w-80{
+  width:80%;
+  margin:0 auto;
+}
+@media(max-width:768px){
+  .w-80{
+    width:95%;
+  }
+}
+.w-75{
+  width:75%;
+  margin:0 auto;
+}
+@media(max-width:768px){
+  .w-75{
+    width:95%;
+  }
+}
+.w-75-start{
+  width:75%;
+}
+@media(max-width:768px){
+  .w-75-start{
+    width:95%;
+  }
+}
+.w-50{
+  width:50%;
+  margin:0 auto;
+}
+@media(max-width:768px){
+  .w-50{
+    width:95%;
+  }
+}
+/* BTN´s ----------------------------------------  */
+.btn-color1{
+	background-color:var(--color1);
+	padding: 10px 40px;
+	color:#fff;
+	font-family: "Open Sans", sans-serif;
+	text-decoration: none;
+	transition:.3s ease-in-out;
+	border-radius: 10px;
+	display: inline-block;
+	text-align: center;
+}
+.btn-color1:hover{
+	opacity: .8;
+	color:#fff;
+}
+.btn-color2{
+	background-color:var(--color2);
+	padding: 10px 40px;
+	color:#fff;
+	font-family: "Open Sans", sans-serif;
+	text-decoration: none;
+	transition:.3s ease-in-out;
+	border-radius: 10px;
+	display: inline-block;
+	text-align: center;
+}
+.btn-color2:hover{
+	opacity: .8;
+	color:#fff;
+}
+
+.btn-color3{
+	background-color:var(--color3);
+	padding: 10px 40px;
+	color:#fff;
+	font-family: "Open Sans", sans-serif;
+	text-decoration: none;
+	transition:.3s ease-in-out;
+	border-radius: 10px;
+	display: inline-block;
+	text-align: center;
+}
+.btn-color3:hover{
+	opacity: .8;
+	color:#fff;
+}
+/* backgrounds ------------------------------------------ */
+.bg-white{
+	background-color: #fff;
+}
+.bg-black{
+	background-color: #000;
+}
+.bg-dark{
+	background-color: #333;
+}
+.bg-light{
+	background-color: #222;
+}
+.bg-color1{
+	background-color: var(--color1);
+}
+.bg-color2{
+	background-color: var(--color2);
+}
+.bg-color3{
+	background-color: var(--color3);
+}
+
+
+/*  -----------------------------------------  */
+
+.navbar a{
+	/*color: var(--color1);*/
+	transition: .3s ease-in-out;
+}
+.navbar a:hover{
+	color: var(--color1);
+}
+.navbar .nav-link.active{
+	color: var(--color3)!important;
+}
