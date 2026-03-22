@@ -6,6 +6,11 @@ Este proyecto fue creado para facilitar tareas de **ajustes CSS**, **validación
 
 ![Preview del proyecto](assets/img/preview.jpg)
 
+## Demo
+
+Puedes ver una versión publicada del proyecto aquí:  
+[Ver demo online](https://cgstudio.cl/projects/Device-Screen-Info-Tool/)
+
 ## ¿Qué hace esta herramienta?
 
 Al abrir la página, la herramienta detecta y muestra información útil del dispositivo desde el navegador, como por ejemplo:
