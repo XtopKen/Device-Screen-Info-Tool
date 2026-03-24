@@ -4,6 +4,14 @@ Herramienta web simple para obtener información del dispositivo, navegador y pa
 
 Este proyecto fue creado para facilitar tareas de **ajustes CSS**, **validación responsive**, **soporte frontend** y **adaptación de gráficas o elementos visuales** según el entorno real del cliente.
 
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+[En] A simple web tool that provides real-time information about the user’s device, browser, and screen.
+
+This project was built to streamline CSS adjustments, responsive design validation, frontend support, and the adaptation of charts or other visual elements to match the client’s actual environment.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ![Preview del proyecto](assets/img/preview.jpg)
 
 ## Demo
